@@ -1,47 +1,54 @@
-int t=0;
-int e=0;
+int t=400;
+int e=400;
 public void setup ()
 {
 	size(800,800);
-	frameRate(10);
+	frameRate(30);
+// 	if(t<=200)
+// {
+// 	t++;
+// }
+// else
+// {
+// t=0;	
+// }
+// if(e<=200)
+// {
+// 	e++;
+// }
+// else
+// {
+// e=0;	
+// }
 }
 public void draw()
 {
 
 background(255);
-if(t<=300)
-{
-	t++;
-}
-else
-{
-t--;	
-}
-if(e<=300)
-{
-	e++;
-}
-else
-{
-e=0;	
-}
+
 fracTal(e,t,30,20);
 }
 public void fracTal ( double r, double dRadians, double w,double h)
 {
-if(dRadians<=20){
-	noFill();
+if(r<=50){
+
 double x= r*Math.cos(dRadians);
 double y=r* Math.sin(dRadians);
-stroke(25,89,46);
+stroke(205,49,(int)(Math.random()*255));
 strokeWeight(2);
-ellipse(250+(int)x,250+(int)y,(int)w,(int)h);
+ellipse(400+(int)x,350+(int)y,(int)w,(int)h);
 }
 else
 {
 double x=r* Math.cos(dRadians);
 double y=r*Math.sin(dRadians);
-ellipse(250+(int)x,250+(int)y,(int)w,(int)h);	
-fracTal(r-10,dRadians-10,w+2,h+2);
+stroke(205,49,(int)(Math.random()*255));
+strokeWeight(2);
+ellipse(400+(int)x,350+(int)y,(int)w,(int)h);
+// stroke(49,232,55);
+// strokeWeight(2);
+// ellipse(400+(int)x/2,350+(int)y/2,(int)w,(int)h);	
+fracTal(r-20,dRadians-5,w+1,h+1);
+//fracTal(r-10,dRadians-10,w+2,h+2);
 }
 }
