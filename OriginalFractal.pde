@@ -28,6 +28,10 @@ background(0);
 // e=0;	
 // }
 fracTal(50,e,30,20,100);
+for (int i=0; i<9;i++)
+{
+Ring(30,30*i);
+}
 }
 public void fracTal ( double r, double dRadians, double w,double h, int m)
 {
@@ -65,4 +69,13 @@ ellipse(400+(int)x,350+(int)y,(int)w,(int)h);
 // ellipse(400+(int)x+(int)w,350+(int)y,(int)w/2,(int)h);
 fracTal(r+5,dRadians-9,w+2,h+2, m-1);
 }
+}
+public void Ring (double r, double dRad)
+{
+double x= r*Math.cos(dRad);
+double y=r* Math.sin(dRad);
+fill(255,255,255,120);
+
+ellipse(400+(int)x,350+(int)y,20,20);
+
 }
