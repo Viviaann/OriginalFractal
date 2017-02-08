@@ -74,7 +74,7 @@ public void Ring (double r, double dRad)
 {
 double x= r*Math.cos(dRad);
 double y=r* Math.sin(dRad);
-fill(255,255,255,120);
+fill(255,255,255,170);
 
 ellipse(400+(int)x,350+(int)y,20,20);
 
